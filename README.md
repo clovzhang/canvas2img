@@ -1,61 +1,23 @@
-# ParticleMaker
-Canvas 粒子动画
+# Canvas2image #
+a tool of saving or converting canvas to images
 
-支持使用图片或文字做粒子动画。
+## Demo ##
+[canvas2image](https://zhangkun-jser.github.io/demo/canvans)
 
-支持普通使用，AMD，CMD。
+## Code ##
+you can just use it like this
 
-### 使用方法：
-
-使用文字：
-
-```javascript
-
-    var particleMaker = new ParticleMaker({
-         canvasId: "canvas",
-         startX: 200,
-        startY: 400,
-        endX: 10,
-        endY: 40,
-        content: "Test",
-        fillColor: "#ff4444",
-        effect: "easeOutQuad",
-        onFinish: function(){
-            console.log("onFinish");
-            console.log(l);
-           }
-   });
-   particleMaker.run();
-```
-
-使用图片
-
-```javascript
-
-    l = new Image();
-    l.src = "images.jpeg";
-
-    var particleMaker = new ParticleMaker({
-         canvasId: "canvas",
-         startX: 200,
-        startY: 400,
-        endX: 10,
-        endY: 40,
-        content: l,
-        fillColor: "#ff4444",
-        effect: "easeOutQuad",
-        onFinish: function(){
-            console.log("onFinish");
-            console.log(l);
-           }
-   });
-   particleMaker.run();
-```
-
-### 效果
-
-![http://ww3.sinaimg.cn/large/0060lm7Tgw1f8hqbgormlg30cs0fuh4t.gif](http://ww3.sinaimg.cn/large/0060lm7Tgw1f8hqbgormlg30cs0fuh4t.gif)
-
-
-### License
-MIT License
+    Canvas2Image.saveAsImage(canvasObj, width, height, type)
+    Canvas2Image.saveAsPNG(canvasObj, width, height)
+    Canvas2Image.saveAsJPEG(canvasObj, width, height)
+    Canvas2Image.saveAsGIF(canvasObj, width, height)
+    Canvas2Image.saveAsBMP(canvasObj, width, height)
+    
+    Canvas2Image.convertToImage(canvasObj, width, height, type)
+    Canvas2Image.convertToPNG(canvasObj, width, height)
+    Canvas2Image.convertToJPEG(canvasObj, width, height)
+    Canvas2Image.convertToGIF(canvasObj, width, height)
+    Canvas2Image.convertToBMP(canvasObj, width, height)
+    
+## License
+MIT
